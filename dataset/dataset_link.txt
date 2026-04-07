@@ -1,0 +1,3 @@
+**Dataset Sources:**
+- BDNotes: https://universe.roboflow.com/bluephoenixyts-workspace/bdnotes/dataset/2
+- Coins: https://universe.roboflow.com/bluephoenixyts-workspace/coins-ucvmt/dataset/3
