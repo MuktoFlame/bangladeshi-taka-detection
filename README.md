@@ -39,7 +39,7 @@ Bangladeshi_Taka_Detection_Project/
 pip install -r requirements.txt
 ```
 
-### 2. Run the inference demo (Task 1)
+### 2. Run the inference demo
 
 Uses the combined model (notes + coins) by default:
 ```bash
@@ -51,7 +51,7 @@ To use the notes-only model instead:
 python inference_demo.py --image test_images/sample1.jpg --model models/taka_detection_best.pt
 ```
 
-### 3. Start the API server (Task 2)
+### 3. Start the API server
 
 ```bash
 uvicorn api.app:app --host 0.0.0.0 --port 8000 --reload
@@ -112,7 +112,7 @@ Returns `{"status": "healthy", "model_loaded": true}`.
 
 Returns a welcome message with usage instructions.
 
-## Docker Deployment (Task 4)
+## Docker Deployment
 
 ### Build the Docker image
 
@@ -141,18 +141,17 @@ docker stop taka-api
 docker rm taka-api
 ```
 
-## API Testing Guide (Task 3)
+## API Testing Guide
 
-1. Place at least **5 different test images** of Bangladeshi currency notes in the `test_images/` folder.
+1. Place  **test images** of Bangladeshi currency notes in the `test_images/` folder.
 2. Start the API (locally or via Docker).
 3. Use **Postman** or **curl** to send each image to `POST /predict`.
-4. Capture screenshots of each request and response for your submission.
 
 **Postman steps:**
 1. Open Postman → New Request → **POST** `http://localhost:8000/predict`
 2. Go to **Body** → select **form-data**
 3. Key: `file`, Type: **File**, Value: select your test image
-4. Click **Send** and capture the screenshot of the response
+4. Click **Send**
 
 ## Model Details
 
